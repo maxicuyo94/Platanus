@@ -1,0 +1,25 @@
+<table>
+    |<tr>
+        <th>Mercado</th>
+        <th>Time(UNIX)</th>
+        <th>Monto </th>
+        <th>Precio </th>
+        <th>Valor </th>
+        <th>Direccion </th>
+    </tr>
+    <% @file2.each do |v| %>
+    |<tr>
+        <td><%=v[0]%></td>
+        <td><%=v[1]%></td>
+        <td><%=v[2]%></td>
+        <td><%=v[3]%></td>
+        <td><%=v[5]%></td>
+        <td><%=v[4]%></td>
+ 
+     </tr>
+    <%end%>
+</table>
+<%= form_with(url: search_path, method: 'get', local: true) do %>
+  <%= button_tag 'Search', class: 'btn btn-success btn-block' %>
+<% end %>
+<%=@example%>
